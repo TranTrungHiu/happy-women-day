@@ -1,0 +1,171 @@
+/* Reset cơ bản */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #fff5f5;
+    font-family:'Courier New', Courier, monospace ;
+    overflow: hidden;
+}
+
+/* Terapkan animasi dengan delay */
+.title span {
+    opacity: 0;
+    animation: typing 1s ease forwards;
+    animation-delay: var(--delay);
+  }
+
+.title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+  
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+  
+    width: 100%;
+    height: 100vh;
+    text-shadow: 0 0 20px white;
+    letter-spacing: 0px;
+  }
+
+  @media (min-width: 500px) {
+    .title {
+      letter-spacing: 20px;
+    }
+  }
+
+/* Khung chứa nội dung */
+.container {
+    text-align: center;
+    background-color: #ffebee;
+    padding: 50px; /* Giảm padding để không quá rộng */
+    border-radius: 20px;
+    border: 3px solid #ff6b81;
+    box-shadow: 0 8px 20px rgba(255, 107, 129, 0.3);
+    max-width: 800px;
+    width: 90%;
+}
+
+/* Tiêu đề */
+.header_text {
+    font-size: 40px; /* Tăng kích thước tiêu đề */
+    color: #ff6b81;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(255, 107, 129, 0.2);
+    text-align: center;
+}
+
+/* Bọc GIF để căn chỉnh */
+.gif_wrapper {
+    display: flex;
+    justify-content: center;
+    background-color: #ffe4e4;
+    border-radius: 15px;
+    box-shadow: 0 4px 5px rgba(255, 107, 129, 0.2);
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+/* Chỉnh GIF nằm ngang */
+.gif_container {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Khoảng cách giữa GIF */
+    flex-wrap: wrap; /* Để không bị tràn khi màn hình nhỏ */
+    width: 100%;
+}
+
+/* Làm GIF lớn hơn */
+.gif_container img {
+    max-width: 250px; /* Tăng kích thước GIF */
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Nút bấm */
+.buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Thiết kế chung cho nút */
+.btn {
+    padding: 15px 30px;
+    font-size: 25px;
+    border: 2px solid #ff6b81;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: #ff6b81;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    box-shadow: 0 4px 10px rgba(255, 107, 129, 0.3);
+}
+
+.btn:hover {
+    background-color: white;
+    color: #ff6b81;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(255, 107, 129, 0.4);
+}
+
+/* Nút No màu đỏ */
+#noButton {
+    background-color: #ff4757;
+    border-color: #ff4757;
+}
+
+#noButton:hover {
+    background-color: white;
+    color: #ff4757;
+}
+
+/* Hiệu ứng lắc nhẹ */
+@keyframes wiggle {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(-5deg); }
+    50% { transform: rotate(5deg); }
+    75% { transform: rotate(-5deg); }
+    100% { transform: rotate(0deg); }
+}
+
+.wiggle {
+    animation: wiggle 0.5s ease-in-out;
+}
+
+/* Responsive cho điện thoại */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+        width: 95%;
+    }
+
+    .header_text {
+        font-size: 30px; /* Giảm size chữ cho điện thoại */
+    }
+
+    .gif_container {
+        flex-direction: column; /* Để GIF xếp dọc trên màn hình nhỏ */
+        align-items: center;
+    }
+
+    .gif_container img {
+        width: 150px; /* Giảm kích thước GIF cho phù hợp */
+    }
+
+    .btn {
+        font-size: 18px;
+        padding: 10px 20px;
+    }
+}
