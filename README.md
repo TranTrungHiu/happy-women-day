@@ -1,7 +1,3 @@
-Here’s a draft for the `README.md` file for your repository, `happy-women-day`:
-
----
-
 # Happy Women's Day
 
 A creative and interactive web project celebrating International Women's Day, built using HTML, SCSS, JavaScript, and CSS.
